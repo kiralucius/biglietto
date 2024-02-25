@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <div class="testata">
+            <h1>Biglietto Corrente</h1>
+        </div>
+
+        <div class="testata">
+            <div class="bigliettoCorrente" *ngIf="biglietti.length > 0">
+                {{ biglietti[biglietti.length - 1] }}
+            </div>   
+        </div>
+
+        <div>
+            <button (click)="prossimoBiglietto()">Nuovo Biglietto</button>
+            <button (click)="showList = !showList">Mostra Biglietti</button>
+        </div>
+
+
+
+        <div *ngIf="showList" class="contenitore">
+            <div class="biglietto" *ngFor="let biglietto of biglietti; let i = index" [ngClass]="{'pari': leggiInt(biglietto) % 2 == 0, 'dispari': leggiInt(biglietto) % 2 != 0}">
+            {{ biglietto }}
+            </div>
+        </div>
+
+        <div>
+            <button (click)="azzeraBiglietti()">Azzera Lista</button>
+        </div>
+    </body>
+</html>

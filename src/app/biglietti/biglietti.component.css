@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenitore, .testata {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.bigliettoCorrente{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 44px;
+    background-color: yellow;
+}
+
+.biglietto {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+  
+.dispari {
+    background-color: rgb(230, 173, 173);
+}
+  
+.pari {
+    background-color: rgb(150, 255, 150);
+}
+
+button{
+    font-size: 28px; 
+    padding: 5px 30px;
+    align-items: center;
+    border-radius: 5px;
+    border: 5px rgb(182, 182, 182);
+    border-style: outset;
+}
+
+button:active {
+    background-color: #0099ff;
+    border: 5px lightcyan inset;
+}
